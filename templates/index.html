@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>歯式文字収集</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="{{url_for('static', filename = 'app.js')}}"></script>
+    <link href="{{url_for('static', filename = 'app.css')}}" rel="stylesheet">
+  </head>
+  <body onload="mam_draw_init();">
+    <div align="center">
+      <h1>歯式文字(0~8) or A~E</h1>
+      <div>
+          <p>{{ message }}</p>
+      </div>
+      <form action="/" method="POST" enctype="multipart/form-data" class="selecter">
+        <div>
+            <select name="fav">
+                <option value="">丸付きorノーマルの選択</option>
+                <option value="normal">normal</option>
+                <option value="cercle">cercle</option>
+            </select>
+            <select name="radio">
+                <option value="">保存する文字を選択してください</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+                <option value="seven">7</option>
+                <option value="eight">8</option>
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+                <option value="d">D</option>
+                <option value="e">E</option>
+            </select>
+        </div>
+        <div>
+          <input type="submit" value="送信">
+        </div>
+      </form>
+      <div class="canvas" id="candiv">
+          <!-- <canvas id="can" width="280px" height="280px"></canvas> -->
+          <canvas id="can"></canvas>
+      </div>
+      <form action="/" method="post">
+          <button type="button" onClick="clearCan();" value="クリア" class="clear-button">クリア</button>
+          <button type="button" id="img" name="img" onClick="sendImage();" value="保存" class="send-button">保存</button>
+      </form>
+      <div id="answer"></div>
+    </div>
+  </body>
+</html>
