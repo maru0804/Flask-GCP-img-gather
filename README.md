@@ -5,7 +5,9 @@ flaskとGCPを使用して手書き画像収集webサイトを作成
 手書き入力された画像はGCSにフォルダ分けして保存される
  
 # DEMO
- 
+
+![demo](https://user-images.githubusercontent.com/53184634/83307892-9767f280-a240-11ea-8b15-668956df1edf.gif)
+
 # Requirement
  
 requirements.txtファイルで必要なものを指定
