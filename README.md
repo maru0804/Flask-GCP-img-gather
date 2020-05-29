@@ -1,103 +1,33 @@
-# Flask-GCP-img-gather
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# Flask img gather
  
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
- 
-"hoge"が何かを簡潔に紹介する
+flaskとGCPを使用して手書き画像収集webサイトを作成
+
+手書き入力された画像はGCSにフォルダ分けして保存される
  
 # DEMO
  
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
- 
-# Features
- 
-"hoge"のセールスポイントや差別化などを説明する
- 
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
+requirements.txtファイルで必要なものを指定
  
 # Usage
+
+- ファイルに必要事項を追加する
+ - your project name:GCPのプロジェクト名の記入
+ - your backet name:GCSのbacket名を記入
+ - your GCP URL:GCPの実行時に作成されるURLを記入
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
+google cloud consoleにファイルをアップロードして以下のコマンドを入力して実行する
+
+- 初期化コマンド
 ```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
+gcloud init
 ```
+- 実行コマンド
+```bash
+gcloud app deploy
+```
+
  
 # Note
  
